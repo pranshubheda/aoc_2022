@@ -33,7 +33,7 @@ class Solution2 {
             lines.add(tokens);
         }
 
-        char[][] grid = new char[max_y+5][max_x-min_x+20+500];
+        char[][] grid = new char[max_y+5][max_x-min_x+20+400];
 
         for (int i = 0; i < grid.length; i++) {
             Arrays.fill(grid[i], '.');            
@@ -48,7 +48,7 @@ class Solution2 {
                     int count = Math.abs(coords_2[1]-coords_1[1])+1;
                     int starting_x = Math.min(coords_1[1], coords_2[1]);
                     for (int j = 0; j < count; j++) {
-                        grid[starting_x+j][coords_1[0]-min_x+10+200] = '#';
+                        grid[starting_x+j][coords_1[0]-min_x+10+100] = '#';
                         // Thread.sleep(500);
                         // System.out.print("\033[H\033[2J");  
                         // System.out.flush();
@@ -59,7 +59,7 @@ class Solution2 {
                     int count = Math.abs(coords_2[0]-coords_1[0])+1;
                     int starting_y = Math.min(coords_1[0], coords_2[0]);
                     for (int j = 0; j < count; j++) {
-                        grid[coords_1[1]][starting_y-min_x+j+10+200] = '#';
+                        grid[coords_1[1]][starting_y-min_x+j+10+100] = '#';
                         // Thread.sleep(500);
                         // System.out.print("\033[H\033[2J");  
                         // System.out.flush();
