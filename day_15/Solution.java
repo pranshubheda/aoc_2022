@@ -54,6 +54,8 @@ public class Solution {
 
         HashSet<String> result = new HashSet<>();
 
+        // Brute force - does not work with larger input :D 
+
         for (Integer[] coords : sb) {
             int d = Math.abs(coords[2]-coords[0]) + Math.abs(coords[3]-coords[1]);
             q.add(new Integer[] { coords[0], coords[1] });            
